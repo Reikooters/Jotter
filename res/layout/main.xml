@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ListView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/listView"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" android:longClickable="false"/>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:tools="http://schemas.android.com/tools"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent" >
+
+    <ViewAnimator
+            android:id="@+id/viewAnimator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+        <ListView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/listView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+        <ListView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/listView2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+    </ViewAnimator>
+
+    </LinearLayout>
+
+</RelativeLayout>

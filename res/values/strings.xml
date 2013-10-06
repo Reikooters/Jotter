@@ -11,4 +11,8 @@
     <string name="new_category">New Category</string>
     <string name="create_new">Create New</string>
     <string name="open">Open</string>
+    <string name="dialog_search_message">Hello</string>
+    <string name="dialog_search_title">Search</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
 </resources>
