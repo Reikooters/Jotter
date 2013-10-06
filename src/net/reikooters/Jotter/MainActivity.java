@@ -6,8 +6,10 @@ import android.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.Environment;
 import android.text.InputType;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -18,6 +20,8 @@ import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.*;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,11 +30,13 @@ import java.util.List;
 public class MainActivity extends Activity
 {
     public final static String EXTRA_MESSAGE = "net.reikooters.Jotter.MESSAGE";
+    public final static String LOG_TAG = "Jotter";
     ViewAnimator viewAnimator;
     ListView categoryListView;
     ListView noteListView;
-    final ArrayList<String> categoryList = new ArrayList<String>();
+    ArrayList<String> categoryList = new ArrayList<String>();
     StableArrayAdapter categoryAdapter;
+    int menuLevel = 0;
 
     /**
      * Called when the activity is first created.
@@ -49,18 +55,23 @@ public class MainActivity extends Activity
         viewAnimator.setInAnimation(inAnim);
         viewAnimator.setOutAnimation(outAnim);
 
+        categoryListView = (ListView) findViewById(R.id.categoryListView);
+        noteListView = (ListView) findViewById(R.id.noteListView);
+
+        /*
         String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
                 "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
                 "Linux", "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux",
                 "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux", "OS/2",
                 "Android", "iPhone", "WindowsMobile" };
 
-        categoryListView = (ListView) findViewById(R.id.categoryListView);
-        noteListView = (ListView) findViewById(R.id.noteListView);
-
         for (int i = 0; i < values.length; ++i) {
             categoryList.add(values[i]);
         }
+        */
+
+        loadData();
+
         categoryAdapter = new StableArrayAdapter(this,
                 android.R.layout.simple_list_item_1, categoryList);
         categoryListView.setAdapter(categoryAdapter);
@@ -87,6 +98,7 @@ public class MainActivity extends Activity
                 );
                 */
                 viewAnimator.showNext();
+                ++menuLevel;
             }
 
         });
@@ -159,16 +171,25 @@ public class MainActivity extends Activity
         }
     }
 
-    /*
     @Override
     public void onBackPressed()
     {
+        if (menuLevel > 0)
+        {
+            viewAnimator.showPrevious();
+            --menuLevel;
+        }
+        else
+        {
+            super.onBackPressed();
+        }
+        /*
         Intent startMain = new Intent(Intent.ACTION_MAIN);
         startMain.addCategory(Intent.CATEGORY_HOME);
         startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(startMain);
+        */
     }
-    */
 
     void addItem()
     {
@@ -231,5 +252,86 @@ public class MainActivity extends Activity
         categoryList.add(text);
         categoryAdapter.addItem(text);
         categoryAdapter.notifyDataSetChanged();
+        saveData();
     }
+
+    /* Checks if external storage is available for read and write */
+    public boolean isExternalStorageWritable() {
+        String state = Environment.getExternalStorageState();
+        if (Environment.MEDIA_MOUNTED.equals(state)) {
+            return true;
+        }
+        return false;
+    }
+
+    /* Checks if external storage is available to at least read */
+    public boolean isExternalStorageReadable() {
+        String state = Environment.getExternalStorageState();
+        if (Environment.MEDIA_MOUNTED.equals(state) ||
+                Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean saveData() {
+        if (isExternalStorageReadable())
+        {
+            /*
+            // Get the directory for the user's public pictures directory.
+            File dir = new File(Environment.getExternalStorageDirectory() + "/Jotter/");
+            if (!dir.mkdirs()) {
+                Log.e(LOG_TAG, "Directory not created");
+            }
+            File file = new File(dir, "jotter_data.txt");
+            if (file.exists ()) file.delete ();
+            try {
+                FileOutputStream out = new FileOutputStream(file);
+                out.write();
+                out.flush();
+                out.close();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            */
+
+            File dir = new File(Environment.getExternalStorageDirectory() + "/Jotter/");
+            if (!dir.mkdirs())
+            {
+                Log.e(LOG_TAG, "Directory not created");
+                return false;
+            }
+
+            String ser = SerializeObject.objectToString(categoryList);
+            if (ser != null && !ser.equalsIgnoreCase(""))
+                SerializeObject.WriteSettings(this, ser, "jotter_categories.dat");
+            else
+                SerializeObject.WriteSettings(this, "", "jotter_categories.dat");
+
+            return true;
+        }
+
+        return false;
+    }
+
+    public boolean loadData()
+    {
+        String ser = SerializeObject.ReadSettings(this, "jotter_categories.dat");
+        if (ser != null && !ser.equalsIgnoreCase(""))
+        {
+            Object obj = SerializeObject.stringToObject(ser);
+            // Then cast it to your object and
+            if (obj instanceof ArrayList) {
+                // Do something
+                categoryList = (ArrayList<String>)obj;
+            }
+            else
+                return false;
+        }
+
+        return true;
+    }
+
+
 }
