@@ -10,17 +10,10 @@
     <item android:id="@+id/action_settings"
           android:title="@string/action_settings"
           android:showAsAction="never" />
-    <item android:id="@+id/new_game"
-          android:title="@string/new_game"
-          android:showAsAction="ifRoom">
-        <!-- "file" submenu -->
-        <menu>
-            <item android:id="@+id/create_new"
-                  android:title="@string/create_new" />
-            <item android:id="@+id/open"
-                  android:title="@string/open" />
-        </menu>
-    </item>
+    <item android:id="@+id/new_category"
+          android:title="@string/new_category"
+          android:icon="@android:drawable/ic_menu_add"
+          android:showAsAction="ifRoom"/>
     <item android:id="@+id/help"
           android:title="@string/help" />
 </menu>

@@ -30,15 +30,15 @@
     <list default="true" id="283a0e5d-17b4-443c-856e-56b087e01ab6" name="Default" comment="" />
     <ignored path="Jotter.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381031322600" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381032475008" ignored="false" />
     <file path="/fragment.java" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381030461011" ignored="false" />
     <file path="/main.xml" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381030753317" ignored="false" />
     <file path="/JotterActivity.java" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381022826999" ignored="false" />
-    <file path="/a.dummy" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381028200179" ignored="false" />
+    <file path="/a.dummy" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381032462972" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381025808221" ignored="false" />
     <file path="/DisplayMessageActivity.java" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381024923856" ignored="false" />
-    <file path="/main_activity_actions.xml" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381028861483" ignored="false" />
-    <file path="/strings.xml" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381025621570" ignored="false" />
+    <file path="/main_activity_actions.xml" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381032472173" ignored="false" />
+    <file path="/strings.xml" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381032450099" ignored="false" />
     <file path="/themes.xml" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381028076101" ignored="false" />
     <file path="/actionbar_tab_indicator.xml" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381026587179" ignored="false" />
     <file path="/MainActivity.java" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381031299223" ignored="false" />
@@ -103,10 +103,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/net/reikooters/Jotter/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="58" selection-start="1945" selection-end="1945" vertical-scroll-proportion="0.30253622">
+            <state line="53" column="58" selection-start="1945" selection-end="1945" vertical-scroll-proportion="-6.68">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1205#1213#0" expanded="true" />
@@ -119,10 +119,17 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ic_launcher.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/drawable-ldpi/ic_launcher.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="themes.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values/themes.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="28" selection-start="50" selection-end="50" vertical-scroll-proportion="-0.68">
+            <state line="33" column="35" selection-start="1421" selection-end="1421" vertical-scroll-proportion="-22.44">
               <folding />
             </state>
           </provider>
@@ -131,16 +138,7 @@
       <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="615" selection-end="615" vertical-scroll-proportion="-6.8">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="actionbar_tab_indicator.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/drawable-xhdpi/actionbar_tab_indicator.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="11" selection-start="1811" selection-end="1811" vertical-scroll-proportion="-22.76">
+            <state line="9" column="44" selection-start="467" selection-end="467" vertical-scroll-proportion="-3.06">
               <folding />
             </state>
           </provider>
@@ -149,7 +147,7 @@
       <file leaf-file-name="actionbar_tab_indicator.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/actionbar_tab_indicator.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="30" selection-start="1168" selection-end="1168" vertical-scroll-proportion="-18.36">
+            <state line="27" column="30" selection-start="1168" selection-end="1168" vertical-scroll-proportion="-9.0">
               <folding />
             </state>
           </provider>
@@ -182,10 +180,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_activity_actions.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main_activity_actions.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/res/menu/main_activity_actions.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="55" selection-start="694" selection-end="694" vertical-scroll-proportion="-10.2">
+            <state line="13" column="45" selection-start="628" selection-end="628" vertical-scroll-proportion="0.4722222">
               <folding />
             </state>
           </provider>
@@ -214,15 +212,15 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/net/reikooters/Jotter/JotterActivity.java" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/net/reikooters/Jotter/DisplayMessageActivity.java" />
         <option value="$PROJECT_DIR$/res/drawable-xhdpi/actionbar_tab_indicator.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/drawable-hdpi/actionbar_tab_indicator.xml" />
-        <option value="$PROJECT_DIR$/res/values/themes.xml" />
-        <option value="$PROJECT_DIR$/res/menu/main_activity_actions.xml" />
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/src/net/reikooters/Jotter/MainActivity.java" />
+        <option value="$PROJECT_DIR$/res/values/themes.xml" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/res/menu/main_activity_actions.xml" />
       </list>
     </option>
   </component>
@@ -627,7 +625,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924226" sideWeight="0.67074525" order="-1" side_tool="false" content_ui="tabs" />
@@ -638,7 +636,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39933258" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39933258" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -648,8 +646,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.67074525" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24919957" sideWeight="0.67074525" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32925472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24919957" sideWeight="0.6006674" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -721,22 +719,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/ic_launcher.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable-mdpi/ic_launcher.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable-xhdpi/ic_launcher.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-ldpi/ic_launcher.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -771,27 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="615" selection-end="615" vertical-scroll-proportion="-6.8">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/actionbar_tab_indicator.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="30" selection-start="1168" selection-end="1168" vertical-scroll-proportion="-18.36">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/themes.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="28" selection-start="50" selection-end="50" vertical-scroll-proportion="-0.68">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="41" selection-start="355" selection-end="355" vertical-scroll-proportion="-4.76">
@@ -806,13 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/menu/main_activity_actions.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="55" selection-start="694" selection-end="694" vertical-scroll-proportion="-10.2">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="45" selection-start="194" selection-end="194" vertical-scroll-proportion="-1.7">
@@ -823,9 +783,14 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/ic_launcher.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/net/reikooters/Jotter/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="58" selection-start="1945" selection-end="1945" vertical-scroll-proportion="0.30253622">
+        <state line="53" column="58" selection-start="1945" selection-end="1945" vertical-scroll-proportion="-6.68">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1205#1213#0" expanded="true" />
@@ -834,6 +799,39 @@
             <element signature="e#2316#2317#0" expanded="true" />
             <element signature="e#2463#2480#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-ldpi/ic_launcher.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/actionbar_tab_indicator.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="30" selection-start="1168" selection-end="1168" vertical-scroll-proportion="-9.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/themes.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="35" selection-start="1421" selection-end="1421" vertical-scroll-proportion="-22.44">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="44" selection-start="467" selection-end="467" vertical-scroll-proportion="-3.06">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/main_activity_actions.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="45" selection-start="628" selection-end="628" vertical-scroll-proportion="0.4722222">
+          <folding />
         </state>
       </provider>
     </entry>

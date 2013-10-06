@@ -8,7 +8,7 @@
     <string name="title_activity_display_message">My Message</string>
     <string name="action_search">Search</string>
     <string name="help">Help</string>
-    <string name="new_game">New Game</string>
+    <string name="new_category">New Category</string>
     <string name="create_new">Create New</string>
     <string name="open">Open</string>
 </resources>

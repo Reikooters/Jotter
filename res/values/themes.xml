@@ -35,6 +35,6 @@
         <item name="android:textColor">@color/actionbar_text</item>
     </style>
     <color name="actionbar_text">#FFFFFFFF</color>
-    <color name="actionbar_background">#FFf3822c</color>
+    <color name="actionbar_background">#FF004895</color>
     <color name="actionbar_tab_background">#ffd06e26</color>
 </resources>
