@@ -15,4 +15,8 @@
     <string name="dialog_search_title">Search</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
+    <array name="contextMenuArray">
+        <item>Open</item>
+        <item>Delete</item>
+    </array>
 </resources>

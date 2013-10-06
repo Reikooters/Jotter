@@ -10,10 +10,7 @@ import android.os.Environment;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
+import android.view.*;
 import android.content.Intent;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -58,6 +55,8 @@ public class MainActivity extends Activity
         categoryListView = (ListView) findViewById(R.id.categoryListView);
         noteListView = (ListView) findViewById(R.id.noteListView);
 
+        registerForContextMenu(categoryListView);
+
         /*
         String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
                 "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
@@ -97,8 +96,7 @@ public class MainActivity extends Activity
                         }
                 );
                 */
-                viewAnimator.showNext();
-                ++menuLevel;
+                openCategory(position);
             }
 
         });
@@ -178,9 +176,13 @@ public class MainActivity extends Activity
         {
             viewAnimator.showPrevious();
             --menuLevel;
+
+            if (menuLevel == 0)
+                setTitle(R.string.app_name);
         }
         else
         {
+            // Quit program
             super.onBackPressed();
         }
         /*
@@ -250,9 +252,16 @@ public class MainActivity extends Activity
     public void addCategory(String text)
     {
         categoryList.add(text);
+        saveData();
         categoryAdapter.addItem(text);
         categoryAdapter.notifyDataSetChanged();
+    }
+
+    public void delCategory(int index)
+    {
+        categoryList.remove(index);
         saveData();
+        categoryAdapter.notifyDataSetChanged();
     }
 
     /* Checks if external storage is available for read and write */
@@ -300,7 +309,6 @@ public class MainActivity extends Activity
             if (!dir.mkdirs())
             {
                 Log.e(LOG_TAG, "Directory not created");
-                return false;
             }
 
             String ser = SerializeObject.objectToString(categoryList);
@@ -333,5 +341,66 @@ public class MainActivity extends Activity
         return true;
     }
 
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v,
+                                    ContextMenu.ContextMenuInfo menuInfo)
+    {
+        if (v.getId() == R.id.categoryListView)
+        {
+            AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)menuInfo;
+            menu.setHeaderTitle(categoryList.get(info.position));
+            String[] menuItems = getResources().getStringArray(R.array.contextMenuArray);
 
+            for (int i = 0; i<menuItems.length; i++)
+                menu.add(Menu.NONE, i, i, menuItems[i]);
+        }
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item)
+    {
+        final AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)item.getMenuInfo();
+        int menuItemIndex = item.getItemId();
+        //String[] menuItems = getResources().getStringArray(R.array.contextMenuArray);
+        //String menuItemName = menuItems[menuItemIndex];
+        //String listItemName = categoryList.get(info.position);
+
+        switch (menuItemIndex)
+        {
+            // Open
+            case 0:
+                openCategory(info.position);
+                break;
+
+            // Delete
+            case 1:
+                /*
+                categoryListView.animate().setDuration(1000).alpha(0)
+                        .withEndAction(new Runnable()
+                        {
+                            @Override
+                            public void run()
+                            {
+                                categoryList.remove(info.position);
+                                categoryAdapter.notifyDataSetChanged();
+                                categoryListView.setAlpha(1);
+                            }
+                        }
+                        );
+                        */
+                delCategory(info.position);
+                break;
+        }
+
+        //TextView text = (TextView)findViewById(R.id.footer);
+        //text.setText(String.format("Selected %s for item %s", menuItemName, listItemName));
+        return true;
+    }
+
+    void openCategory(int index)
+    {
+        viewAnimator.showNext();
+        setTitle(categoryList.get(index));
+        ++menuLevel;
+    }
 }
