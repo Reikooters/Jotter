@@ -30,18 +30,18 @@
     <list default="true" id="283a0e5d-17b4-443c-856e-56b087e01ab6" name="Default" comment="" />
     <ignored path="Jotter.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381054323828" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381061051481" ignored="false" />
     <file path="/fragment.java" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381030461011" ignored="false" />
-    <file path="/main.xml" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381053986823" ignored="false" />
+    <file path="/main.xml" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381058465643" ignored="false" />
     <file path="/JotterActivity.java" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381022826999" ignored="false" />
     <file path="/a.dummy" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381032462972" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381025808221" ignored="false" />
     <file path="/DisplayMessageActivity.java" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381024923856" ignored="false" />
-    <file path="/main_activity_actions.xml" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381044443903" ignored="false" />
+    <file path="/main_activity_actions.xml" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381059432773" ignored="false" />
     <file path="/strings.xml" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381051620919" ignored="false" />
     <file path="/themes.xml" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381028076101" ignored="false" />
     <file path="/actionbar_tab_indicator.xml" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381026587179" ignored="false" />
-    <file path="/MainActivity.java" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381054085512" ignored="false" />
+    <file path="/MainActivity.java" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381061007662" ignored="false" />
     <file path="/a.java" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381030493645" ignored="false" />
     <file path="/SearchDialogFragment.java" changelist="283a0e5d-17b4-443c-856e-56b087e01ab6" time="1381040327603" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -104,20 +104,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/net/reikooters/Jotter/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="60" selection-start="3961" selection-end="3961" vertical-scroll-proportion="0.0">
+            <state line="439" column="46" selection-start="14940" selection-end="14940" vertical-scroll-proportion="0.8498986">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1054#1062#0" expanded="true" />
-                <element signature="e#2687#3588#0" expanded="true" />
-                <element signature="e#3576#3577#0" expanded="true" />
-                <element signature="e#4210#4227#0" expanded="true" />
-                <element signature="e#7541#7794#0" expanded="true" />
-                <element signature="e#7783#7784#0" expanded="true" />
-                <element signature="e#7848#8042#0" expanded="true" />
-                <element signature="e#8031#8032#0" expanded="true" />
+                <element signature="e#1112#1120#0" expanded="true" />
+                <element signature="e#2774#3675#0" expanded="true" />
+                <element signature="e#3663#3664#0" expanded="true" />
+                <element signature="e#4297#4314#0" expanded="true" />
+                <element signature="e#7669#7922#0" expanded="true" />
+                <element signature="e#7911#7912#0" expanded="true" />
+                <element signature="e#7976#8170#0" expanded="true" />
+                <element signature="e#8159#8160#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -146,7 +147,7 @@
       <file leaf-file-name="DisplayMessageActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/net/reikooters/Jotter/DisplayMessageActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="27" selection-start="1285" selection-end="1285" vertical-scroll-proportion="0.0">
+            <state line="27" column="20" selection-start="770" selection-end="775" vertical-scroll-proportion="-7.84">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -191,16 +192,16 @@
       <file leaf-file-name="main_activity_actions.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/menu/main_activity_actions.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="12" selection-start="730" selection-end="730" vertical-scroll-proportion="-10.88">
+            <state line="5" column="40" selection-start="218" selection-end="218" vertical-scroll-proportion="-3.4">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="1096" selection-end="1096" vertical-scroll-proportion="1.1896162">
+            <state line="17" column="50" selection-start="699" selection-end="699" vertical-scroll-proportion="-1.7">
               <folding />
             </state>
           </provider>
@@ -225,12 +226,12 @@
         <option value="$PROJECT_DIR$/res/drawable-hdpi/actionbar_tab_indicator.xml" />
         <option value="$PROJECT_DIR$/res/values/themes.xml" />
         <option value="$PROJECT_DIR$/src/net/reikooters/Jotter/SearchDialogFragment.java" />
-        <option value="$PROJECT_DIR$/res/menu/main_activity_actions.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/net/reikooters/Jotter/SerializeObject.java" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/net/reikooters/Jotter/MainActivity.java" />
+        <option value="$PROJECT_DIR$/res/menu/main_activity_actions.xml" />
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/src/net/reikooters/Jotter/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -635,7 +636,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32870865" sideWeight="0.6006674" order="-1" side_tool="false" content_ui="tabs" />
@@ -646,14 +647,14 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39933258" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39933258" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.67074525" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.6006674" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24919957" sideWeight="0.6006674" order="0" side_tool="false" content_ui="combo" />
@@ -786,15 +787,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/reikooters/Jotter/DisplayMessageActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="27" selection-start="1285" selection-end="1285" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="80" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
@@ -811,13 +803,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/menu/main_activity_actions.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="12" selection-start="730" selection-end="730" vertical-scroll-proportion="-10.88">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="18" selection-start="886" selection-end="886" vertical-scroll-proportion="-6.46">
@@ -825,31 +810,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/reikooters/Jotter/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/res/menu/main_activity_actions.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="60" selection-start="3961" selection-end="3961" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1054#1062#0" expanded="true" />
-            <element signature="e#2687#3588#0" expanded="true" />
-            <element signature="e#3576#3577#0" expanded="true" />
-            <element signature="e#4210#4227#0" expanded="true" />
-            <element signature="e#7541#7794#0" expanded="true" />
-            <element signature="e#7783#7784#0" expanded="true" />
-            <element signature="e#7848#8042#0" expanded="true" />
-            <element signature="e#8031#8032#0" expanded="true" />
-          </folding>
+        <state line="5" column="40" selection-start="218" selection-end="218" vertical-scroll-proportion="-3.4">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="1096" selection-end="1096" vertical-scroll-proportion="1.1896162">
+        <state line="17" column="50" selection-start="699" selection-end="699" vertical-scroll-proportion="-1.7">
           <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/reikooters/Jotter/DisplayMessageActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="20" selection-start="770" selection-end="775" vertical-scroll-proportion="-7.84">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/reikooters/Jotter/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="439" column="46" selection-start="14940" selection-end="14940" vertical-scroll-proportion="0.8498986">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1054#1062#0" expanded="true" />
+            <element signature="e#1112#1120#0" expanded="true" />
+            <element signature="e#2774#3675#0" expanded="true" />
+            <element signature="e#3663#3664#0" expanded="true" />
+            <element signature="e#4297#4314#0" expanded="true" />
+            <element signature="e#7669#7922#0" expanded="true" />
+            <element signature="e#7911#7912#0" expanded="true" />
+            <element signature="e#7976#8170#0" expanded="true" />
+            <element signature="e#8159#8160#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>

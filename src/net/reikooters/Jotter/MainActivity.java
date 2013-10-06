@@ -33,8 +33,10 @@ public class MainActivity extends Activity
     ListView categoryListView;
     ListView noteListView;
     ArrayList<String> categoryList = new ArrayList<String>();
+    ArrayList<String> dataList = new ArrayList<String>();
     StableArrayAdapter categoryAdapter;
     int menuLevel = 0;
+    int currentCategory = 0;
 
     /**
      * Called when the activity is first created.
@@ -174,6 +176,11 @@ public class MainActivity extends Activity
             case R.id.action_settings:
                 //openSettings();
                 return true;
+            case R.id.action_save:
+                updateData();
+                saveData();
+                goBack();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -184,11 +191,9 @@ public class MainActivity extends Activity
     {
         if (menuLevel > 0)
         {
-            viewAnimator.showPrevious();
-            --menuLevel;
-
-            if (menuLevel == 0)
-                setTitle(R.string.app_name);
+            updateData();
+            saveData();
+            goBack();
         }
         else
         {
@@ -213,7 +218,6 @@ public class MainActivity extends Activity
 
         //builder.setMessage(R.string.dialog_search_message);
         builder.setTitle(R.string.create_new);
-        //builder.setMessage(" ");
 
         final EditText searchText = new EditText(this);
         searchText.setEllipsize(TextUtils.TruncateAt.END);
@@ -262,6 +266,7 @@ public class MainActivity extends Activity
     public void addCategory(String text)
     {
         categoryList.add(text);
+        dataList.add("");
         saveData();
         categoryAdapter.addItem(text);
         categoryAdapter.notifyDataSetChanged();
@@ -270,6 +275,7 @@ public class MainActivity extends Activity
     public void delCategory(int index)
     {
         categoryList.remove(index);
+        dataList.remove(index);
         saveData();
         categoryAdapter.notifyDataSetChanged();
     }
@@ -296,36 +302,27 @@ public class MainActivity extends Activity
     public boolean saveData() {
         if (isExternalStorageReadable())
         {
-            /*
-            // Get the directory for the user's public pictures directory.
-            File dir = new File(Environment.getExternalStorageDirectory() + "/Jotter/");
-            if (!dir.mkdirs()) {
-                Log.e(LOG_TAG, "Directory not created");
-            }
-            File file = new File(dir, "jotter_data.txt");
-            if (file.exists ()) file.delete ();
-            try {
-                FileOutputStream out = new FileOutputStream(file);
-                out.write();
-                out.flush();
-                out.close();
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            */
-
             File dir = new File(Environment.getExternalStorageDirectory() + "/Jotter/");
             if (!dir.mkdirs())
             {
                 Log.e(LOG_TAG, "Directory not created");
             }
 
-            String ser = SerializeObject.objectToString(categoryList);
-            if (ser != null && !ser.equalsIgnoreCase(""))
-                SerializeObject.WriteSettings(this, ser, "jotter_categories.dat");
-            else
-                SerializeObject.WriteSettings(this, "", "jotter_categories.dat");
+            {
+                String ser = SerializeObject.objectToString(categoryList);
+                if (ser != null && !ser.equalsIgnoreCase(""))
+                    SerializeObject.WriteSettings(this, ser, "jotter_categories.dat");
+                else
+                    SerializeObject.WriteSettings(this, "", "jotter_categories.dat");
+            }
+
+            {
+                String ser = SerializeObject.objectToString(dataList);
+                if (ser != null && !ser.equalsIgnoreCase(""))
+                    SerializeObject.WriteSettings(this, ser, "jotter_data.dat");
+                else
+                    SerializeObject.WriteSettings(this, "", "jotter_data.dat");
+            }
 
             return true;
         }
@@ -335,18 +332,43 @@ public class MainActivity extends Activity
 
     public boolean loadData()
     {
-        String ser = SerializeObject.ReadSettings(this, "jotter_categories.dat");
-        if (ser != null && !ser.equalsIgnoreCase(""))
         {
-            Object obj = SerializeObject.stringToObject(ser);
-            // Then cast it to your object and
-            if (obj instanceof ArrayList) {
-                // Do something
-                categoryList = (ArrayList<String>)obj;
+            String ser = SerializeObject.ReadSettings(this, "jotter_categories.dat");
+            if (ser != null && !ser.equalsIgnoreCase(""))
+            {
+                Object obj = SerializeObject.stringToObject(ser);
+                // Then cast it to your object and
+                if (obj instanceof ArrayList) {
+                    // Do something
+                    categoryList = (ArrayList<String>)obj;
+                }
+                else
+                    return false;
             }
-            else
-                return false;
         }
+
+        {
+            String ser = SerializeObject.ReadSettings(this, "jotter_data.dat");
+            if (ser != null && !ser.equalsIgnoreCase(""))
+            {
+                Object obj = SerializeObject.stringToObject(ser);
+                // Then cast it to your object and
+                if (obj instanceof ArrayList) {
+                    // Do something
+                    dataList = (ArrayList<String>)obj;
+                }
+                else
+                    return false;
+            }
+        }
+
+        // Pad data to category list size
+        while (dataList.size() < categoryList.size())
+            dataList.add("");
+
+        // Truncate date to category list size
+        while (dataList.size() > categoryList.size())
+            dataList.remove(dataList.size() - 1);
 
         return true;
     }
@@ -409,8 +431,40 @@ public class MainActivity extends Activity
 
     void openCategory(int index)
     {
+        EditText data = (EditText) findViewById(R.id.noteEditText);
+        data.setText(dataList.get(index));
+
         viewAnimator.showNext();
         setTitle(categoryList.get(index));
         ++menuLevel;
+        currentCategory = index;
+
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.showSoftInput(data, InputMethodManager.SHOW_FORCED);
+    }
+
+    void updateData()
+    {
+        if (menuLevel > 0)
+        {
+            EditText data = (EditText) findViewById(R.id.noteEditText);
+            dataList.set(currentCategory, data.getText().toString());
+        }
+    }
+
+    void goBack()
+    {
+        if (menuLevel > 0)
+        {
+            viewAnimator.showPrevious();
+            --menuLevel;
+
+            if (menuLevel == 0)
+                setTitle(R.string.app_name);
+
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(getCurrentFocus()
+                    .getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        }
     }
 }

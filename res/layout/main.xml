@@ -19,6 +19,14 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent" />
 
+        <EditText
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/noteEditText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" android:hint="Enter note text" android:linksClickable="true"
+                android:textIsSelectable="false" android:autoLink="phone|email|web" android:editable="true"
+                android:enabled="true" android:inputType="textImeMultiLine|textMultiLine|textCapSentences|textLongMessage|textAutoComplete"/>
+
         <ListView
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/noteListView"
