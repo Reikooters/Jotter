@@ -1,5 +1,6 @@
 package net.reikooters.Jotter;
 
+import android.animation.LayoutTransition;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DialogFragment;
@@ -100,6 +101,15 @@ public class MainActivity extends Activity
             }
 
         });
+
+        LayoutTransition l = new LayoutTransition();
+        l.enableTransitionType(LayoutTransition.APPEARING);
+        l.enableTransitionType(LayoutTransition.CHANGE_APPEARING);
+        l.enableTransitionType(LayoutTransition.CHANGE_DISAPPEARING);
+        l.enableTransitionType(LayoutTransition.CHANGING);
+        l.enableTransitionType(LayoutTransition.DISAPPEARING);
+        ViewGroup viewGroup = (ViewGroup) findViewById(R.id.container);
+        viewGroup.setLayoutTransition(l);
     }
 
     private class StableArrayAdapter extends ArrayAdapter<String>
