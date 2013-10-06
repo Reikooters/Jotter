@@ -3,22 +3,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
     <!-- Search, should appear as action button -->
     <item android:id="@+id/action_search"
-          android:icon="@android:drawable/ic_menu_search"
-          android:title="@string/action_search"
-          android:showAsAction="ifRoom" />
-    <item android:id="@+id/menu_search"
           android:title="Search"
-          android:icon="@android:drawable/ic_menu_search"
           android:showAsAction="ifRoom"
           android:actionViewClass="android.widget.SearchView" />
     <!-- Settings, should always be in the overflow -->
     <item android:id="@+id/action_settings"
           android:title="@string/action_settings"
           android:showAsAction="never" />
-    <item android:id="@+id/new_category"
+    <item android:id="@+id/action_new_category"
           android:title="@string/new_category"
           android:icon="@android:drawable/ic_menu_add"
           android:showAsAction="ifRoom"/>
-    <item android:id="@+id/help"
-          android:title="@string/help" />
 </menu>

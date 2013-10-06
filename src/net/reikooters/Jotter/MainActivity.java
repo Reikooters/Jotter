@@ -27,6 +27,10 @@ public class MainActivity extends Activity
 {
     public final static String EXTRA_MESSAGE = "net.reikooters.Jotter.MESSAGE";
     ViewAnimator viewAnimator;
+    ListView categoryListView;
+    ListView noteListView;
+    final ArrayList<String> categoryList = new ArrayList<String>();
+    StableArrayAdapter categoryAdapter;
 
     /**
      * Called when the activity is first created.
@@ -45,42 +49,44 @@ public class MainActivity extends Activity
         viewAnimator.setInAnimation(inAnim);
         viewAnimator.setOutAnimation(outAnim);
 
-        final ListView listview = (ListView) findViewById(R.id.listView);
-        final ListView listview2 = (ListView) findViewById(R.id.listView2);
-
         String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
                 "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
                 "Linux", "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux",
                 "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux", "OS/2",
                 "Android", "iPhone", "WindowsMobile" };
 
-        final ArrayList<String> list = new ArrayList<String>();
-        for (int i = 0; i < values.length; ++i) {
-            list.add(values[i]);
-        }
-        final StableArrayAdapter adapter = new StableArrayAdapter(this,
-                android.R.layout.simple_list_item_1, list);
-        listview.setAdapter(adapter);
-        listview2.setAdapter(adapter);
+        categoryListView = (ListView) findViewById(R.id.categoryListView);
+        noteListView = (ListView) findViewById(R.id.noteListView);
 
-        listview.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        for (int i = 0; i < values.length; ++i) {
+            categoryList.add(values[i]);
+        }
+        categoryAdapter = new StableArrayAdapter(this,
+                android.R.layout.simple_list_item_1, categoryList);
+        categoryListView.setAdapter(categoryAdapter);
+        //noteListView.setAdapter(adapter);
+
+        categoryListView.setOnItemClickListener(new AdapterView.OnItemClickListener()
         {
             @Override
             public void onItemClick(AdapterView<?> parent, final View view,
                                     final int position, long id) {
                 //final long item = parent.getItemIdAtPosition(position);
+                /*
                 view.animate().setDuration(1000).alpha(0)
                         .withEndAction(new Runnable()
                         {
                             @Override
                             public void run()
                             {
-                                list.remove(position);
-                                adapter.notifyDataSetChanged();
+                                categoryList.remove(position);
+                                categoryAdapter.notifyDataSetChanged();
                                 view.setAlpha(1);
                             }
                         }
                 );
+                */
+                viewAnimator.showNext();
             }
 
         });
@@ -109,6 +115,9 @@ public class MainActivity extends Activity
             return true;
         }
 
+        public void addItem(String text) {
+            mIdMap.put(text, mIdMap.size());
+        }
     }
 
     /** Called when the user clicks the Send button */
@@ -139,6 +148,9 @@ public class MainActivity extends Activity
             //case R.id.action_search:
             //    openSearch();
             //    return true;
+            case R.id.action_new_category:
+                addItem();
+                return true;
             case R.id.action_settings:
                 //openSettings();
                 return true;
@@ -158,7 +170,7 @@ public class MainActivity extends Activity
     }
     */
 
-    void openSearch()
+    void addItem()
     {
         //DialogFragment newFragment = new SearchDialogFragment();
         //newFragment.show(null, "search");
@@ -167,11 +179,12 @@ public class MainActivity extends Activity
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         //builder.setMessage(R.string.dialog_search_message);
-        builder.setTitle(R.string.dialog_search_title);
+        builder.setTitle(R.string.create_new);
+        //builder.setMessage(" ");
 
         final EditText searchText = new EditText(this);
         searchText.setEllipsize(TextUtils.TruncateAt.END);
-        searchText.setInputType(InputType.TYPE_TEXT_FLAG_AUTO_COMPLETE);
+        searchText.setInputType(InputType.TYPE_TEXT_FLAG_AUTO_COMPLETE | InputType.TYPE_TEXT_FLAG_CAP_WORDS);
         builder.setView(searchText);
 
         // Add the buttons
@@ -180,6 +193,7 @@ public class MainActivity extends Activity
             public void onClick(DialogInterface dialog, int id)
             {
                 // User clicked OK button
+                addCategory(searchText.getText().toString());
             }
         });
         builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener()
@@ -198,5 +212,24 @@ public class MainActivity extends Activity
         searchText.requestFocus();
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.showSoftInput(searchText, InputMethodManager.SHOW_FORCED);
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu)
+    {
+        MenuItem searchViewMenuItem = menu.findItem(R.id.action_search);
+        SearchView mSearchView = (SearchView) searchViewMenuItem.getActionView();
+        int searchImgId = getResources().getIdentifier("android:id/search_button", null, null);
+        ImageView v = (ImageView) mSearchView.findViewById(searchImgId);
+        v.setImageResource(R.drawable.search_force);
+        //mSearchView.setOnQueryTextListener(this);
+        return super.onPrepareOptionsMenu(menu);
+    }
+
+    public void addCategory(String text)
+    {
+        categoryList.add(text);
+        categoryAdapter.addItem(text);
+        categoryAdapter.notifyDataSetChanged();
     }
 }
